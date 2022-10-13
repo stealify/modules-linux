@@ -1,3 +1,11 @@
+# @stealify/components
+This Repo Holds Build instructions for the linux platform mostly using gcc make some components maybe are compile able and useable on other platforms but it is currently not a goal of this project windows users can use WSL and WSLg to run and compile this it should work flawless.
+
+it is part of https://github.com/stealify this will not work always when you also use just you should switch to stealify if you want to use this
+
+The Unlicense applys as also the licenses specified by the component it self.
+
+
 ## Internal
 
 - vm
@@ -14,7 +22,7 @@
 - thread
 - udp
 
-## Blessed
+## 3rd_party
 
 - blake3
 - openssl
@@ -23,24 +31,3 @@
 - rocksdb
 - wasm/libwabt - emscripten
 - zlib
-
-## Wanted
-
-- libvirt
-- libkvm
-- libpg
-- hiredis
-- libpng
-- skia
-- libwabt c++
-- mysql
-- ffi
-- sqlite
-- memcached
-- zlib-ng (already done?)
-- boringssl
-- mbedtls (already done?): https://github.com/billywhizz/just/tree/0bfbdda9490e2231cf56b8f3986f4983d92e16ec/modules
-
-
-## TODO
-- use wabt instead of js version: https://github.com/WebAssembly/wabt/blob/master/src/tools/wat2wasm.cc
