@@ -24,7 +24,8 @@ cp -f ${MODULE_NAME}.so ${LIBS}/${MODULE_NAME}.so`}
   
 export const bestlines = {
   assets: [
-    { fileName: "bestlines.cc", source: `#include "bestlines.h"
+	{ fileName: "bestlines.json", source: `{ "obj": ["deps/bestline-master/bestline.o"] }`, },
+	{ fileName: "bestlines.cc", source: `#include "bestlines.h"
 
 void just::bestlines::BestlineHistoryLoad(const FunctionCallbackInfo<Value> &args) {
   String::Utf8Value filename(args.GetIsolate(), args[0]);
@@ -73,8 +74,8 @@ void just::bestlines::Init(Isolate* isolate, Local<ObjectTemplate> target) {
   SET_METHOD(isolate, module, "disableRawMode", BestlineDisableRawMode);
   SET_MODULE(isolate, target, "bestlines", module);
 }`,
-    },
-    { fileName: "bestlines.h", source: `#ifndef JUST_BESTLINE_H
+	},
+	{ fileName: "bestlines.h", source: `#ifndef JUST_BESTLINE_H
 #define JUST_BESTLINE_H
 
 #include <just.h>
@@ -107,9 +108,12 @@ extern "C" {
 	}
 }
 
-#endif`,},
-    { fileName: "baselines.d.ts", source: ``, },
+#endif`,
+	},
+	{ fileName: "baselines.d.ts", source: ``, },
   ],
-  chunks: [{}]
+  chunks: [
+	{},
+  ]
   
 }
