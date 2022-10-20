@@ -1,6 +1,7 @@
 C = gcc
 CC = g++
-LIBS=/usr/local/lib/just
+LIBS=$(JUST_HOME)
+#/usr/local/lib/just
 MODULE=bestlines
 
 .PHONY: help clean
