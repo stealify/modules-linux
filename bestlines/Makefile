@@ -8,15 +8,13 @@ MODULE=bestlines
 help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_\.-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-deps: 
+deps: ## dependencies
 	mkdir -p deps
 	curl -L -o deps/bestline.tar.gz https://codeload.github.com/jart/bestline/tar.gz/master
 	tar -zxvf deps/bestline.tar.gz -C deps/
-
-deps/bestline-master/bestline.o: deps ## dependencies
 	cd deps/bestline-master && $(C) -fPIC -c -O3 -o bestline.o bestline.c
 
-library: deps/bestline-master/bestline.o ## build shared library
+library: deps ## build shared library
 	$(CC) -c -fPIC -std=c++17 -DV8_COMPRESS_POINTERS -Ideps/bestline-master -I$(JUST_HOME) -I$(JUST_HOME)/deps/v8/include -g -O3 -march=native -mtune=native -Wall -Wextra -flto -Wno-unused-parameter ${MODULE}.cc
 	$(CC) -g -s -shared -flto -pthread -m64 -Wl,--start-group deps/bestline-master/bestline.o ${MODULE}.o -Wl,--end-group -Wl,-soname=${MODULE}.so -o ${MODULE}.so -ldl -lrt
 	objcopy --only-keep-debug ${MODULE}.so ${MODULE}.so.debug
