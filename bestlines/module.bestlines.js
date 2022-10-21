@@ -109,7 +109,7 @@ extern "C" {
 
 #endif`,
 	},
-	{ fileName: "baselines.d.ts", source: ``, },
+	{ fileName: "bestlines.d.ts", source: ``, },
 	{ name: "baseline", code: `` },
 ]
   
