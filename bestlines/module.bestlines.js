@@ -22,8 +22,7 @@ cp -f ${MODULE_NAME}.so ${LIBS}/${MODULE_NAME}.so`}
 `;
 
   
-export const bestlines = {
-  assets: [
+export const AssetsOrChunks = [
 	{ fileName: "bestlines.json", source: `{ "obj": ["deps/bestline-master/bestline.o"] }`, },
 	{ fileName: "bestlines.cc", source: `#include "bestlines.h"
 
@@ -111,9 +110,7 @@ extern "C" {
 #endif`,
 	},
 	{ fileName: "baselines.d.ts", source: ``, },
-  ],
-  chunks: [
-	{},
-  ]
+	{ name: "baseline", code: `` },
+]
   
-}
+
