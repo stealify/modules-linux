@@ -165,9 +165,21 @@ listen(
 
 
 
-const createEl = (tagName, propertys) => (el = document.createElement(tagName)), Object.keys(propertys).forEach(propName=>Object.assign(el[propName], propertys[propName]));
+const createEl = (tagName, propertys,el) => (
+    el = document.createElement(tagName), 
+    Object.keys(propertys).forEach (
+        propName => Object.assign(
+            el[propName], 
+            propertys[propName]
+        )
+    ), 
+    el
+);
 
-const composeEl = (el1,el2) => (el1.appendChild(el2), el1);
+const composeEl = (el1,el2) => (
+    el1.appendChild(el2), 
+    el1
+);
 
 composeEl(createEl("span", {
     style: {
