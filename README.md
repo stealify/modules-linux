@@ -4,3 +4,5 @@ is the main building block to build and run isolated indipendent components and 
 a advanced security concept to implement zero trust platforms and similar things.
 
 It also adds Scripting Abilitys and Modular Code Loading as other usefull stuff to make your code more flexible, fast as also secure by design.
+
+It aims to build Kernels for any OS and Device that are highly reuseable it also can be used as a shell to build Operating Systems which can execute standalone or on existing Operating systems via lightwight vm instances.
