@@ -163,16 +163,13 @@ listen(
     
 )
 
-
-
-const createEl = (tagName, propertys,el) => (
-    el = document.createElement(tagName), 
-    Object.keys(propertys).forEach (
+const createEl = (tagName, propertys) => (
+    let el = document.createElement(tagName), 
+    Object.keys(propertys).forEach(
         propName => Object.assign(
-            el[propName], 
-            propertys[propName]
+            el[propName], propertys[propName]
         )
-    ), 
+    ),
     el
 );
 
