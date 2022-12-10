@@ -1,46 +1,8 @@
-## Internal
+# b8g
+B8G The Big Engine a Universal thing to run code at scale using diffrent schedulers. Implements Low Level Tasks and Task Runners as also a Component System via Linking Tasks using diffrent Scheduler methods
+is the main building block to build and run isolated indipendent components and share partial resources between them via Capability Passing which is
+a advanced security concept to implement zero trust platforms and similar things.
 
-- vm
-- sys
-- net
-- loop
-- fs
-- versions
-- tty
-- encode
-- inspector
-- sha1
-- signals
-- thread
-- udp
+It also adds Scripting Abilitys and Modular Code Loading as other usefull stuff to make your code more flexible, fast as also secure by design.
 
-## Blessed
-
-- blake3
-- openssl
-- pg
-- picohttp
-- rocksdb
-- wasm/libwabt - emscripten
-- zlib
-
-## Wanted
-
-- libvirt
-- libkvm
-- libpg
-- hiredis
-- libpng
-- skia
-- libwabt c++
-- mysql
-- ffi
-- sqlite
-- memcached
-- zlib-ng (already done?)
-- boringssl
-- mbedtls (already done?): https://github.com/billywhizz/just/tree/0bfbdda9490e2231cf56b8f3986f4983d92e16ec/modules
-
-
-## TODO
-- use wabt instead of js version: https://github.com/WebAssembly/wabt/blob/master/src/tools/wat2wasm.cc
+It aims to build Kernels for any OS and Device that are highly reuseable it also can be used as a shell to build Operating Systems which can execute standalone or on existing Operating systems via lightwight vm instances.

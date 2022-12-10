@@ -29,7 +29,6 @@ clean: ## tidy up
 
 all: ## make all
 	make clean
-	make deps
 	make library
 
 cleanall: ## tidy up dependencies
